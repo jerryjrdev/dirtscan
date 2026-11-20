@@ -1,0 +1,111 @@
+:root {
+  --accent: #a3420a;
+  --accent-soft: #f6dcc9;
+  --ink: #1d1b18;
+  --ink-secondary: #524d46;
+  --surface: #fcfbf8;
+  --canvas: #e6e2db;
+  --border: #d2ccc2;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--canvas);
+}
+
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+.header { margin-bottom: 1.75rem; }
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.card p { margin: 0.5rem 0; }
+
+.summary {
+  margin: 0;
+  font-weight: 600;
+}
+
+ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+li { margin: 0.2rem 0; }
+
+.accent { color: var(--accent); }
+a.accent:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .page { padding: 1.5rem 1rem 2rem; }
+  h1 { font-size: 1.75rem; }
+  .card { padding: 1.1rem 1.15rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #ff9b5c;
+    --accent-soft: #4a2a14;
+    --ink: #f3efe9;
+    --ink-secondary: #b5aea4;
+    --surface: #211f1c;
+    --canvas: #161513;
+    --border: #3b3732;
+  }
+}
